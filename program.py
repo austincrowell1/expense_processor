@@ -2,15 +2,11 @@ import argparse
 import datetime
 from dotenv import load_dotenv
 import fnmatch
-# import gspread
 import json
 import logging
 import numpy as np
-# from oauth2client.service_account import ServiceAccountCredentials
 import os
 import pandas as pd
-# import snowflake.connector as sc
-# from snowflake.connector.pandas_tools import write_pandas
 import sys
 
 from preprocessing import preprocessing
