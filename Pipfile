@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 pandas = "*"
+python-dotenv = "*"
+gspread = "*"
+oauth2client = "*"
+snowflake-connector-python = {extras = ["pandas"], version = "*"}
 
 [dev-packages]
 

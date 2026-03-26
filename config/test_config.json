@@ -1,0 +1,74 @@
+{
+    "load_files":true,
+    "update_categories":true,
+    "refresh_gsheet":true,
+    "setup_dir":"snowflake_scripts_test",
+    "setup_scripts":{
+        "tables":"tables",
+        "dataloads":"dataloads",
+        "procedures":"procedures"
+    },
+    "inq_dir":"inQ_test",
+    "output_dir":"output_test",
+    "preproc_files":{
+        "bank_1_fn":"bank4_*.csv"
+    },
+    "config_table":"CONFIG_LOG",
+    "categories_proc":"update_categories",
+    "uncategorized_proc":"get_uncategorized",
+    "uncategorized_file_name":"uncategorized_expenses",
+    "column_mappings":{
+        "bank 1":{
+            "transaction date":"transaction_date",
+            "posted date":"posted_date",
+            "card no.":"card_no",
+            "description":"description",
+            "category":"category",
+            "debit":"debit",
+            "credit":"credit"
+        },
+        "bank 2":{
+            "date":"trans_date",
+            "time":"trans_time",
+            "amount":"amount",
+            "type":"trans_type",
+            "description":"description"
+        },
+        "bank 3":{
+            "date":"trans_date",
+            "time":"trans_time",
+            "amount":"amount",
+            "type":"trans_type",
+            "description":"description"
+        },
+        "bank 4":{
+            "date": "trans_date",
+            "description": "description",
+            "amount": "amount",
+            "running bal.": "running_bal"
+        },
+        "bank 5":{
+            "trans. date": "trans_date",
+            "post date": "post_date",
+            "description": "description",
+            "amount": "amount",
+            "category": "category"
+        },
+        "bank 6":{
+            "transaction date": "trans_date",
+            "post date": "post_date",
+            "description": "description",
+            "category": "category",
+            "type": "trans_type",
+            "amount": "amount",
+            "memo": "memo"
+        }
+    },
+    "get_expenses_proc":"get_cleansed_expenses",
+    "google_creds_file":"creds/google_creds.json",
+    "sheets_scope":[
+        "https://spreadsheets.google.com/feeds",
+        "https://www.googleapis.com/auth/drive"
+    ],
+    "expense_sheet":"expenses_test"
+}
