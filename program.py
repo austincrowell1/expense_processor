@@ -2,15 +2,15 @@ import argparse
 import datetime
 from dotenv import load_dotenv
 import fnmatch
-import gspread
+# import gspread
 import json
 import logging
 import numpy as np
-from oauth2client.service_account import ServiceAccountCredentials
+# from oauth2client.service_account import ServiceAccountCredentials
 import os
 import pandas as pd
-import snowflake.connector as sc
-from snowflake.connector.pandas_tools import write_pandas
+# import snowflake.connector as sc
+# from snowflake.connector.pandas_tools import write_pandas
 import sys
 
 from preprocessing import preprocessing
@@ -157,9 +157,10 @@ def main(kwargs):
         # get uncategorized transactions and output to csv
         uncat_results = sc.run_query_get_dataframe(f"CALL {uncat_proc}();")
         uncat_file_name = os.path.join(output_dir,f"{uncat_fn_base}_{fn_run_datetime}.csv")
-        uncat_results.to_csv(uncat_file_name, index=False)
-        print(f"uncategorized transactions output to: {uncat_file_name}")
-        logger.info(f"uncategorized transactions output to: {uncat_file_name}")
+        if not uncat_results.empty:
+            uncat_results.to_csv(uncat_file_name, index=False)
+            print(f"uncategorized transactions output to: {uncat_file_name}")
+            logger.info(f"uncategorized transactions output to: {uncat_file_name}")
 
     if refresh_gsheet:
         # get final expenses

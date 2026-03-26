@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-import pyarrow
 import snowflake.connector as sc
 from snowflake.connector.pandas_tools import write_pandas
 
@@ -11,8 +10,6 @@ class snowflake_client:
         self.snow_conn = sc.connect(**conn_params)
 
     def run_query_get_results(self, query):
-        # old way potentially?
-        # query_df = pd.read_sql(config_query,snow_conn)
         with self.snow_conn.cursor() as cur:
             cur.execute(query)
             results = cur.fetchone()[0]

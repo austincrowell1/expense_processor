@@ -5,7 +5,6 @@ import pandas as pd
 from types import SimpleNamespace
 
 class preprocessing:
-#deal with junk info at top of bofa file
     def __init__(self,logger,archive_dir,preproc_files):
         # setting the class vars is a little clunky out of scalability and wanting to keep bank names annonymous
         self.logger = logger
@@ -13,8 +12,8 @@ class preprocessing:
         self.preproc_file_list = SimpleNamespace(**preproc_files)
 
     def file_preprocessing(self, bank_file,col_map):
-        # if bank_file.name in self.preproc_file_list.bank_1_fn:
         if fnmatch.fnmatch(bank_file.name.lower(),self.preproc_file_list.bank_1_fn):
+            #deal with junk info at top of bank file
             with open(bank_file.path, "r") as b1_input_file:
                 lines = b1_input_file.readlines()
                 # deleting rows in reverse order to maintain index
