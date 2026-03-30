@@ -184,6 +184,7 @@ Dashboard demo available on Tableau Public: https://public.tableau.com/views/exp
 
 
 Screenshots:
+<img width="1536" height="1043" alt="Image" src="https://github.com/user-attachments/assets/0340aee8-abc0-4e4f-9281-6e9173da7632" />
 
 
 The dashboard provides:
