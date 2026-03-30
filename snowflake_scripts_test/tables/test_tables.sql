@@ -109,3 +109,9 @@ CREATE OR REPLACE TABLE exp_exclusions(
     exclude_reason VARCHAR(255)
 );
 
+CREATE OR REPLACE TABLE category(
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    insert_date DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    modify_date DATETIME DEFAULT CURRENT_TIMESTAMP(),
+    category VARCHAR(255)
+);

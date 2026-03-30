@@ -47,3 +47,29 @@ values
     -- ('bank 5 test record 4','bank 5 test cat'),
     ('bank 5 test record 5','bank 5 test cat')
 ;
+
+INSERT INTO category (category)
+VALUES
+    ('amazon'),
+    ('bills - cellphone'),
+    ('bills - internet'),
+    ('car expenses'),
+    ('clothes'),
+    ('furniture'),
+    ('gas'),
+    ('groceries & home goods'),
+    ('healthcare'),
+    ('hobby - art'),
+    ('hobby - books'),
+    ('hobby - booze'),
+    ('misc'),
+    ('paycheck'),
+    ('personal care'),
+    ('pet expenses'),
+    ('rent'),
+    ('restaurants'),
+    ('subscriptions - streaming'),
+    ('travel & experiences'),
+    ('utilities - electrical'),
+    ('utilities - internet'),
+    ('utilities - water')

@@ -25,7 +25,8 @@
     "get_expenses_proc":"get_cleansed_expenses",
     "google_creds_file":"path/to/creds",
     "sheets_scope":[
-        "https://sample.com/"
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive"
     ],
     "expense_sheet":"expenses_test"
 }
